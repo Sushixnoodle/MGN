@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class TextGone : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject Obj;
+    public float activeTime;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (Obj.active == true)
+        {
+            StartCoroutine(Disableobj());
+        }
+    }
+    IEnumerator Disableobj()
+    {
+        yield return new WaitForSeconds(activeTime);
+        Obj.SetActive(false);
     }
 }
