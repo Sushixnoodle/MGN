@@ -7,7 +7,7 @@ public class CollectibleCounter : MonoBehaviour
 {
     TMPro.TMP_Text text;
     int count;
-
+    
     void Awake()
     {
         text = GetComponent<TMPro.TMP_Text>();
@@ -39,8 +39,8 @@ public class CollectibleCounter : MonoBehaviour
         // Check if 'text' is not null before updating its text property
         if (text != null)
         {
-            text.text = $"{count} / {Collectible.total}";
-            Debug.Log($"Updated count: {count}, Total: {Collectible.total}");
+            text.text = $"{count} / " + "4";
+            Debug.Log($"Updated count: {count}, Total: " + "4");
         }
         else
         {
