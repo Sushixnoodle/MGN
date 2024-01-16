@@ -15,14 +15,9 @@ public class PlaySoundOnEnter : MonoBehaviour
         source = GetComponent<AudioSource>();
         soundTrigger = GetComponent<Collider>();
     }
-    void OnTriggerEnter(Collider collider) 
-    {
+    void OnTriggerEnter(Collider collider) {
         if ( collider.gameObject.tag == "Player")
-        {
-            Debug.Log("Sound is working");
-            source.Play();
-        }
-        
+        source.Play();
     }
     
 }
