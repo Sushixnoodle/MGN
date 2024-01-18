@@ -29,8 +29,19 @@ public class PlayerMovement : MonoBehaviour
         Cursor.visible = false;
     }
 
+    public Rigidbody rb;
+
+    public MovementState state;
+
+    public enum MovementState
+    {
+        freeze
+    }
+    public bool freeze;
     void Update()
     {
+       
+        
         Vector3 forward = transform.TransformDirection(Vector3.forward);
         Vector3 right = transform.TransformDirection(Vector3.right);
 
@@ -40,7 +51,15 @@ public class PlayerMovement : MonoBehaviour
         float movementDirectionY = moveDirection.y;
         moveDirection = (forward * curSpeedX) + (right * curSpeedY);
 
-        if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
+        //mode freeze
+        if (freeze)
+        {
+            state = MovementState.freeze;
+            walkSpeed = 0;
+            rb.velocity = Vector3.zero;
+
+        }
+        else if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
         {
             moveDirection.y = jumpPower;
         }
@@ -78,4 +97,5 @@ public class PlayerMovement : MonoBehaviour
             transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
         }
     }
+
 }
