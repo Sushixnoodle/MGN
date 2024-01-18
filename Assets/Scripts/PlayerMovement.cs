@@ -1,13 +1,15 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerMovement : MonoBehaviour
 {
     public Camera playerCamera;
-    public float walkSpeed = 6f;
-    public float runSpeed = 12f;
+    public float walkSpeed = 20f;
+    public float runSpeed = 25f;
     public float jumpPower = 7f;
     public float gravity = 10f;
     public float lookSpeed = 2f;
@@ -20,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
     private float rotationX = 0;
     private CharacterController characterController;
 
+   
+ // private Vector3 CalculateJumpVelocity = Vector3.zero;
     private bool canMove = true;
 
     void Start()
@@ -38,6 +42,11 @@ public class PlayerMovement : MonoBehaviour
         freeze
     }
     public bool freeze;
+
+    public bool activeGrapple;
+
+   
+
     void Update()
     {
        
@@ -83,8 +92,8 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             characterController.height = defaultHeight;
-            walkSpeed = 6f;
-            runSpeed = 12f;
+            walkSpeed = 20f;
+            runSpeed = 25f;
         }
 
         characterController.Move(moveDirection * Time.deltaTime);
@@ -97,5 +106,8 @@ public class PlayerMovement : MonoBehaviour
             transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
         }
     }
+
+
+
 
 }
