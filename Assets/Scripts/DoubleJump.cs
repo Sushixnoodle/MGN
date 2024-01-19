@@ -5,10 +5,10 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
-public class PlayerMovement : MonoBehaviour
+public class DoubleJump : MonoBehaviour
 {
-    
-    
+
+
     public Camera playerCamera;
     public float walkSpeed = 20f;
     public float runSpeed = 25f;
@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
     private float rotationX = 0;
     private CharacterController characterController;
 
-   
+
     private bool canMove = true;
 
     void Start()
@@ -42,18 +42,11 @@ public class PlayerMovement : MonoBehaviour
     {
         freeze
     }
-    public bool freeze;
 
-    public bool activeGrapple;
 
-    public void JumpToPosition(Vector3 targetPosition, float trajectoryHeight)
-    {
-        activeGrapple = true;
-        
-        velocityToSet = CalculateJumpVelocity(transform.position, targetPosition, trajectoryHeight);
-        Invoke(nameof(SetVelocity), 0.1f);
-    }
+  
 
+   
     private Vector3 velocityToSet;
     private void SetVelocity()
     {
@@ -62,33 +55,14 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (activeGrapple) return;
-        
-        Vector3 forward = transform.TransformDirection(Vector3.forward);
-        Vector3 right = transform.TransformDirection(Vector3.right);
-
-        bool isRunning = Input.GetKey(KeyCode.LeftShift);
-        float curSpeedX = canMove ? (isRunning ? runSpeed : walkSpeed) * Input.GetAxis("Vertical") : 0;
-        float curSpeedY = canMove ? (isRunning ? runSpeed : walkSpeed) * Input.GetAxis("Horizontal") : 0;
-        float movementDirectionY = moveDirection.y;
-        moveDirection = (forward * curSpeedX) + (right * curSpeedY);
-
+       
         //mode freeze
-        if (freeze)
-        {
-            state = MovementState.freeze;
-            walkSpeed = 0;
-            rb.velocity = Vector3.zero;
-
-        }
-        else if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
+       
+       if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
         {
             moveDirection.y = jumpPower;
         }
-        else
-        {
-            moveDirection.y = movementDirectionY;
-        }
+       
 
         if (!characterController.isGrounded)
         {
@@ -120,19 +94,8 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public Vector3 CalculateJumpVelocity(Vector3 startPoint, Vector3 endPoint, float trajectoryHeight)
-    {
-        float gravity = Physics.gravity.y;
-        float displacementY = endPoint.y - startPoint.y;
-        Vector3 displacementXZ = new Vector3(endPoint.x - startPoint.x, 0f, endPoint.z - startPoint.z);
+  
 
-        Vector3 velocityY = Vector3.up * Mathf.Sqrt(-2 * gravity * trajectoryHeight);
-        Vector3 velocityXZ = displacementXZ / (Mathf.Sqrt(-2 * trajectoryHeight / gravity)
-            + Mathf.Sqrt(2 * (displacementY - trajectoryHeight) / gravity));
 
-        return velocityXZ + velocityY;
-    }
-
-    
 
 }

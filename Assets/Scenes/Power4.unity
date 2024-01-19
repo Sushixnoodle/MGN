@@ -1661,10 +1661,12 @@ GameObject:
   - component: {fileID: 1063838807}
   - component: {fileID: 1063838806}
   - component: {fileID: 1063838805}
+  - component: {fileID: 1063838812}
   - component: {fileID: 1063838804}
   - component: {fileID: 1063838803}
   - component: {fileID: 1063838802}
   - component: {fileID: 1063838801}
+  - component: {fileID: 1063838813}
   - component: {fileID: 1063838810}
   - component: {fileID: 1063838811}
   m_Layer: 0
@@ -1746,7 +1748,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1063838800}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce7f3e4c12ec5814692331ceb6257439, type: 3}
   m_Name: 
@@ -1873,7 +1875,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1063838800}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9aa95c552f8a3ed4e904a55fff56dc1a, type: 3}
   m_Name: 
@@ -1886,7 +1888,7 @@ MonoBehaviour:
   lr: {fileID: 796794478}
   maxGrappleDistance: 25
   grappleDelayTime: 0.25
-  grapplingCd: 0
+  grapplingCd: 1
   grappleKey: 324
 --- !u!114 &1063838811
 MonoBehaviour:
@@ -1900,6 +1902,67 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c08f6d1466d9aec4483ff065978e4f60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1063838812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063838800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 107c9f7b639c9a149b8fc8a39e52b781, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkSpeed: 20
+  sprintSpeed: 30
+  swingSpeed: 16
+  groundDrag: 0.27
+  jumpForce: 7.15
+  jumpCooldown: 0.37
+  airMultiplier: 0
+  crouchSpeed: 1.73
+  crouchYScale: 1.78
+  jumpKey: 32
+  sprintKey: 304
+  crouchKey: 306
+  playerHeight: 5
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 8
+  maxSlopeAngle: 0
+  cam: {fileID: 644287593}
+  grappleFov: 95
+  orientation: {fileID: 0}
+  state: 0
+  freeze: 0
+  activeGrapple: 1
+  swinging: 0
+  text_speed: {fileID: 0}
+  text_mode: {fileID: 0}
+--- !u!114 &1063838813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063838800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cc3db7d81bc1d6478f289ecc6ab90a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 644287595}
+  gunTip: {fileID: 839824053}
+  whatIsGrappleable:
+    serializedVersion: 2
+    m_Bits: 192
+  lr: {fileID: 796794478}
+  maxGrappleDistance: 25
+  grappleDelayTime: 0.25
+  overshootYAxis: 2
+  grapplingCd: 0
+  grappleKey: 317
 --- !u!1 &1172015548
 GameObject:
   m_ObjectHideFlags: 0
