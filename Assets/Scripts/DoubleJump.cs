@@ -7,8 +7,6 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class DoubleJump : MonoBehaviour
 {
-
-
     public Camera playerCamera;
     public float walkSpeed = 20f;
     public float runSpeed = 25f;
@@ -24,6 +22,15 @@ public class DoubleJump : MonoBehaviour
     private float rotationX = 0;
     private CharacterController characterController;
 
+    [Header("Ground Check")]
+    public float playerHeight;
+    public LayerMask whatIsGround;
+    bool grounded;
+
+    [Header("Slope Handling")]
+    public float maxSlopeAngle;
+    private RaycastHit slopeHit;
+    private bool exitingSlope;
 
     private bool canMove = true;
 
@@ -42,11 +49,20 @@ public class DoubleJump : MonoBehaviour
     {
         freeze
     }
+    public bool freeze;
 
+    public bool activeGrapple;
 
-  
+    private int jumpCount = 0;
+    public int maxJumps = 2;
 
-   
+    public void JumpToPosition(Vector3 targetPosition, float trajectoryHeight)
+    {
+        activeGrapple = true;
+        velocityToSet = CalculateJumpVelocity(transform.position, targetPosition, trajectoryHeight);
+        Invoke(nameof(SetVelocity), 0.1f);
+    }
+
     private Vector3 velocityToSet;
     private void SetVelocity()
     {
@@ -55,14 +71,42 @@ public class DoubleJump : MonoBehaviour
 
     void Update()
     {
-       
-        //mode freeze
-       
-       if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
+        if (activeGrapple) return;
+
+        Vector3 forward = transform.TransformDirection(Vector3.forward);
+        Vector3 right = transform.TransformDirection(Vector3.right);
+
+        bool isRunning = Input.GetKey(KeyCode.LeftShift);
+        float curSpeedX = canMove ? (isRunning ? runSpeed : walkSpeed) * Input.GetAxis("Vertical") : 0;
+        float curSpeedY = canMove ? (isRunning ? runSpeed : walkSpeed) * Input.GetAxis("Horizontal") : 0;
+        float movementDirectionY = moveDirection.y;
+        moveDirection = (forward * curSpeedX) + (right * curSpeedY);
+
+        // mode freeze
+        if (freeze)
         {
-            moveDirection.y = jumpPower;
+            state = MovementState.freeze;
+            walkSpeed = 0;
+            rb.velocity = Vector3.zero;
         }
-       
+        else if (Input.GetButtonDown("Jump") && canMove)
+        {
+            if (characterController.isGrounded || jumpCount < maxJumps)
+            {
+                moveDirection.y = jumpPower;
+                jumpCount++;
+
+                // Reset jump count when a jump is initiated
+                if (characterController.isGrounded)
+                {
+                    jumpCount = 0;
+                }
+            }
+        }
+        else
+        {
+            moveDirection.y = movementDirectionY;
+        }
 
         if (!characterController.isGrounded)
         {
@@ -74,7 +118,6 @@ public class DoubleJump : MonoBehaviour
             characterController.height = crouchHeight;
             walkSpeed = crouchSpeed;
             runSpeed = crouchSpeed;
-
         }
         else
         {
@@ -94,8 +137,16 @@ public class DoubleJump : MonoBehaviour
         }
     }
 
-  
+    public Vector3 CalculateJumpVelocity(Vector3 startPoint, Vector3 endPoint, float trajectoryHeight)
+    {
+        float gravity = Physics.gravity.y;
+        float displacementY = endPoint.y - startPoint.y;
+        Vector3 displacementXZ = new Vector3(endPoint.x - startPoint.x, 0f, endPoint.z - startPoint.z);
 
+        Vector3 velocityY = Vector3.up * Mathf.Sqrt(-2 * gravity * trajectoryHeight);
+        Vector3 velocityXZ = displacementXZ / (Mathf.Sqrt(-2 * trajectoryHeight / gravity)
+            + Mathf.Sqrt(2 * (displacementY - trajectoryHeight) / gravity));
 
-
+        return velocityXZ + velocityY;
+    }
 }
