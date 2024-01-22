@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1771,7 +1771,7 @@ MonoBehaviour:
   wheel3: {fileID: 3107256}
   wheel4: {fileID: 684549568}
   drivespeed: 600
-  steerspeed: 40
+  steerspeed: 70.6
 --- !u!54 &1008935026
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/c.Vent.unity
     guid: cc13c421ba2c98a4f8d063b8a501a40d
+  - enabled: 1
+    path: Assets/Scenes/d.DoubleJump.unity
+    guid: 7195eef2740d591418fe21b5fbba7736
+  - enabled: 1
+    path: Assets/Scenes/e.Car.unity
+    guid: 6d3d495f5a149534a8d26960902307a5
   m_configObjects: {}
