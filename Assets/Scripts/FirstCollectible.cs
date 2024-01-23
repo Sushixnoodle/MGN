@@ -39,7 +39,8 @@ public class FirstCollectible : MonoBehaviour
         // Check if 'text' is not null before updating its text property
         if (text != null)
         {
-            text.text = $"1" + "{count} / " + "4";
+            text.text = $"{count} / " + "4";
+
 
             Debug.Log($"Updated count: {count}, Total: " + "4");
         }
