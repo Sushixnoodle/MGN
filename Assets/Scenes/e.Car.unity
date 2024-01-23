@@ -2759,8 +2759,8 @@ MonoBehaviour:
   wheel2: {fileID: 562317436}
   wheel3: {fileID: 3107256}
   wheel4: {fileID: 684549568}
-  drivespeed: 600
-  steerspeed: 70.6
+  drivespeed: 692.5
+  steerspeed: 78.1
 --- !u!54 &1008935026
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4680,7 +4680,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dc6e043646bc42e46952bf9914989a42, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -54.5
+      value: -56.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dc6e043646bc42e46952bf9914989a42, type: 3}
       propertyPath: m_LocalPosition.z
