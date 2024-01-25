@@ -1,10 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro; // Import the TMPro namespace
-using UnityEngine.UI;
 
-public class FirstCollectible : MonoBehaviour
+public class ThirdCollectible : MonoBehaviour
 {
     TMPro.TMP_Text text;
     int count;
@@ -49,7 +47,7 @@ public class FirstCollectible : MonoBehaviour
         // Check if 'text' is not null before updating its text property
         if (text != null)
         {
-            text.text = $"1 / " + "5";
+            text.text = $"3 / " + "5";
 
 
             Debug.Log($"Updated count: {count}, Total: " + "5");
