@@ -20,7 +20,9 @@ public class PlaySoundOnEnter : MonoBehaviour
         if ( collider.gameObject.tag == "Player")
         source.Play();
 
-        if (collectible != null) source.Play();
+        if (collectible != null); source.Play();
+
+         
     }
     
 }
