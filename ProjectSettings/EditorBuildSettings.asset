@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/f.Car.unity
     guid: 6d3d495f5a149534a8d26960902307a5
   - enabled: 1
+    path: Assets/Scenes/f.CarAfter.unity
+    guid: fb7d3378084f3854f94ba304da7f778f
+  - enabled: 1
     path: Assets/Scenes/g.FireResistance.unity
     guid: e6debecc732a92442a4738ffa7976706
   - enabled: 1
