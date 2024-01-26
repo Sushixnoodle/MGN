@@ -54,7 +54,7 @@ public class DoubleJump : MonoBehaviour
     public bool activeGrapple;
 
     private int jumpCount = 0;
-    public int maxJumps = 2;
+    public int maxJumps = 1;
 
     public void JumpToPosition(Vector3 targetPosition, float trajectoryHeight)
     {

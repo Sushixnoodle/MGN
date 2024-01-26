@@ -644,12 +644,12 @@ GameObject:
   - component: {fileID: 1872316368}
   - component: {fileID: 1872316367}
   - component: {fileID: 1872316366}
-  - component: {fileID: 1872316365}
   - component: {fileID: 1872316364}
   - component: {fileID: 1872316363}
   - component: {fileID: 1872316362}
   - component: {fileID: 1872316361}
   - component: {fileID: 1872316360}
+  - component: {fileID: 1872316371}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -811,7 +811,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1872316359}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 2.6
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -830,37 +830,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &1872316365
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1872316359}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce7f3e4c12ec5814692331ceb6257439, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerCamera: {fileID: 621711088}
-  walkSpeed: 15
-  runSpeed: 23
-  jumpPower: 24.9
-  gravity: 20
-  lookSpeed: 2
-  lookXLimit: 90
-  defaultHeight: 2
-  crouchHeight: 1
-  crouchSpeed: 3
-  playerHeight: 0
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 0
-  maxSlopeAngle: 0
-  rb: {fileID: 0}
-  state: 0
-  freeze: 0
-  activeGrapple: 0
 --- !u!114 &1872316366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -962,6 +931,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 87.365, z: 0}
+--- !u!114 &1872316371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872316359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac8a79b927c9a29488aad92a25ba761b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 621711088}
+  walkSpeed: 20
+  runSpeed: 25
+  jumpPower: 14.3
+  gravity: 10
+  lookSpeed: 2
+  lookXLimit: 45
+  defaultHeight: 2
+  crouchHeight: 1
+  crouchSpeed: 3
+  playerHeight: 0
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 0
+  maxSlopeAngle: 0
+  rb: {fileID: 0}
+  state: 0
+  freeze: 0
+  activeGrapple: 0
+  maxJumps: 1
 --- !u!1 &1995823356
 GameObject:
   m_ObjectHideFlags: 0

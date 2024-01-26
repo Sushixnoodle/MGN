@@ -38,4 +38,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/i.Balance.unity
     guid: b2367b70ef0cc334491196ff2dd49461
+  - enabled: 1
+    path: Assets/Scenes/j.EndingScreen.unity
+    guid: 4a0c1f231f1210b4da67f8e56e2c97a1
   m_configObjects: {}

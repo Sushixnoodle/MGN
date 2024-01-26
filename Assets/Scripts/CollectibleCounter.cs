@@ -39,8 +39,8 @@ public class CollectibleCounter : MonoBehaviour
         // Check if 'text' is not null before updating its text property
         if (text != null)
         {
-            text.text = $"{count} / " + "4";
-            Debug.Log($"Updated count: {count}, Total: " + "4");
+            text.text = $"{count} / " + "5";
+            Debug.Log($"Updated count: {count}, Total: " + "5");
         }
         else
         {
