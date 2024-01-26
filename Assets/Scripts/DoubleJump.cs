@@ -91,6 +91,7 @@ public class DoubleJump : MonoBehaviour
         }
         else if (Input.GetButtonDown("Jump") && canMove)
         {
+            moveDirection.y = movementDirectionY;
             if (characterController.isGrounded || jumpCount < maxJumps)
             {
                 moveDirection.y = jumpPower;
