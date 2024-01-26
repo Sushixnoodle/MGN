@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/Scenes/g.FireResistance.unity
     guid: e6debecc732a92442a4738ffa7976706
   - enabled: 1
+    path: Assets/Scenes/h.BeforeCounter.unity
+    guid: 47a950b16d1442641aeafa107bd1895b
+  - enabled: 1
     path: Assets/Scenes/h.Counter.unity
     guid: 43c9b0b1c2b37af42992915e8ff5af68
   - enabled: 1
