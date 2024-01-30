@@ -12766,6 +12766,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FinalBoxMap (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1961156762655719089, guid: ca186354dd991d743aa5f62f71b401a1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0634
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
