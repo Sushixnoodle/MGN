@@ -1195,15 +1195,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0b2158194c20f534b9818a2fe841d0fb, type: 3}
       propertyPath: m_LocalScale.x
-      value: 85.04397
+      value: 90.30819
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0b2158194c20f534b9818a2fe841d0fb, type: 3}
       propertyPath: m_LocalScale.y
-      value: -40.967964
+      value: -43.503883
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0b2158194c20f534b9818a2fe841d0fb, type: 3}
       propertyPath: m_LocalScale.z
-      value: 415.36044
+      value: 441.07126
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0b2158194c20f534b9818a2fe841d0fb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3319,7 +3319,7 @@ MonoBehaviour:
   walkSpeed: 20
   runSpeed: 25
   jumpPower: 14.3
-  gravity: 10
+  gravity: 30.73
   lookSpeed: 2
   lookXLimit: 45
   defaultHeight: 2
@@ -6431,15 +6431,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7886542132573263176, guid: 6360541030702ac428a06e0be5382f57, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.3143427
+      value: 0.41804945
       objectReference: {fileID: 0}
     - target: {fileID: 7886542132573263176, guid: 6360541030702ac428a06e0be5382f57, type: 3}
       propertyPath: m_LocalScale.y
-      value: -0.06329054
+      value: -0.08417111
       objectReference: {fileID: 0}
     - target: {fileID: 7886542132573263176, guid: 6360541030702ac428a06e0be5382f57, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.6552901
+      value: 0.87148094
       objectReference: {fileID: 0}
     - target: {fileID: 7886542132573263176, guid: 6360541030702ac428a06e0be5382f57, type: 3}
       propertyPath: m_LocalPosition.x
