@@ -123,7 +123,7 @@ public class DoubleJumpAgain : MonoBehaviour
         else
         {
             characterController.height = defaultHeight;
-            walkSpeed = 20f;
+            walkSpeed = 12f;
             runSpeed = 25f;
         }
 
