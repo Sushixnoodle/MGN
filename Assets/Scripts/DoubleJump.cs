@@ -7,8 +7,8 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class DoubleJump : MonoBehaviour
 {
-    public Animator anim;
-    private Animator animation;
+    //public Animator anim;
+    //private Animator animation;
     public Camera playerCamera;
     public float walkSpeed = 20f;
     public float runSpeed = 25f;
@@ -36,8 +36,13 @@ public class DoubleJump : MonoBehaviour
 
     private bool canMove = true;
 
+    [Header("Animator")]
+
+    public Animator myAnim;
+
     void Start()
     {
+        myAnim = GetComponentInChildren<Animator>();
         characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -84,6 +89,13 @@ public class DoubleJump : MonoBehaviour
         float movementDirectionY = moveDirection.y;
         moveDirection = (forward * curSpeedX) + (right * curSpeedY);
 
+        //Animator
+        myAnim.SetFloat("speed", rb.velocity.magnitude);
+
+
+        Debug.Log(moveDirection.magnitude);
+        Debug.Log(grounded);
+
         // mode freeze
         if (freeze)
         {
@@ -98,12 +110,14 @@ public class DoubleJump : MonoBehaviour
             {
                 moveDirection.y = jumpPower;
                 jumpCount++;
+                myAnim.SetTrigger("jumped");
 
                 // Reset jump count when a jump is initiated
                 if (characterController.isGrounded)
                 {
                     jumpCount = 0;
-                    this.anim.SetBool("Jump", this.grounded);
+                    //this.anim.SetBool("Jump", this.grounded);
+                    myAnim.SetBool("isGrounded", grounded);
                 }
             }
         }
