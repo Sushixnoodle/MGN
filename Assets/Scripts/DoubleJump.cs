@@ -7,6 +7,8 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class DoubleJump : MonoBehaviour
 {
+    public Animator anim;
+    private Animator animation;
     public Camera playerCamera;
     public float walkSpeed = 20f;
     public float runSpeed = 25f;
@@ -101,6 +103,7 @@ public class DoubleJump : MonoBehaviour
                 if (characterController.isGrounded)
                 {
                     jumpCount = 0;
+                    this.anim.SetBool("Jump", this.grounded);
                 }
             }
         }
