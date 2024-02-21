@@ -14948,6 +14948,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vase Shard 3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a06180a09e3e39844884cc87d2346889, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17980,6 +17984,116 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.009999999, y: 0.009999999, z: 0.01}
   m_Center: {x: 0.0000000037252903, y: 0.00000013038516, z: 0.000000035390258}
+--- !u!1001 &1110192269
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 1032cbbafcaa24c4f841a80b50ea44b5, type: 3}
+      propertyPath: m_RootOrder
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1032cbbafcaa24c4f841a80b50ea44b5, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 91.085
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1032cbbafcaa24c4f841a80b50ea44b5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 91.085
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1032cbbafcaa24c4f841a80b50ea44b5, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 91.085
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1032cbbafcaa24c4f841a80b50ea44b5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 48.82
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1032cbbafcaa24c4f841a80b50ea44b5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.75
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1032cbbafcaa24c4f841a80b50ea44b5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 83.714
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1032cbbafcaa24c4f841a80b50ea44b5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.80573213
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1032cbbafcaa24c4f841a80b50ea44b5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5922801
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1032cbbafcaa24c4f841a80b50ea44b5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1032cbbafcaa24c4f841a80b50ea44b5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1032cbbafcaa24c4f841a80b50ea44b5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -72.638
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1032cbbafcaa24c4f841a80b50ea44b5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1032cbbafcaa24c4f841a80b50ea44b5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1032cbbafcaa24c4f841a80b50ea44b5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 478efa24bfb681b4291e8a70a9c7933a, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 1032cbbafcaa24c4f841a80b50ea44b5, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 478efa24bfb681b4291e8a70a9c7933a, type: 2}
+    - target: {fileID: 919132149155446097, guid: 1032cbbafcaa24c4f841a80b50ea44b5, type: 3}
+      propertyPath: m_Name
+      value: Vase Shard 4 (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1032cbbafcaa24c4f841a80b50ea44b5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1110192271}
+  m_SourcePrefab: {fileID: 100100000, guid: 1032cbbafcaa24c4f841a80b50ea44b5, type: 3}
+--- !u!1 &1110192270 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1032cbbafcaa24c4f841a80b50ea44b5, type: 3}
+  m_PrefabInstance: {fileID: 1110192269}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &1110192271
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110192270}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.00925154
+  m_Center: {x: 0, y: 0.00022184044, z: -0.00018670176}
 --- !u!1001 &1124811599
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18836,6 +18950,26 @@ PrefabInstance:
     - target: {fileID: 2162771372323428660, guid: 6360541030702ac428a06e0be5382f57, type: 3}
       propertyPath: m_Name
       value: Collectible (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4927512121453600227, guid: 6360541030702ac428a06e0be5382f57, type: 3}
+      propertyPath: m_Height
+      value: 15.526846
+      objectReference: {fileID: 0}
+    - target: {fileID: 4927512121453600227, guid: 6360541030702ac428a06e0be5382f57, type: 3}
+      propertyPath: m_Radius
+      value: 0.7498224
+      objectReference: {fileID: 0}
+    - target: {fileID: 4927512121453600227, guid: 6360541030702ac428a06e0be5382f57, type: 3}
+      propertyPath: m_Center.x
+      value: 0.00000010963868
+      objectReference: {fileID: 0}
+    - target: {fileID: 4927512121453600227, guid: 6360541030702ac428a06e0be5382f57, type: 3}
+      propertyPath: m_Center.y
+      value: 0.0000000031885201
+      objectReference: {fileID: 0}
+    - target: {fileID: 4927512121453600227, guid: 6360541030702ac428a06e0be5382f57, type: 3}
+      propertyPath: m_Center.z
+      value: 0.24982199
       objectReference: {fileID: 0}
     - target: {fileID: 7886542132573263176, guid: 6360541030702ac428a06e0be5382f57, type: 3}
       propertyPath: m_RootOrder

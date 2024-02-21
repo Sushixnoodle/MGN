@@ -978,6 +978,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vase Shard 4
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1cb6a9d8149529b4aa255be3bba198ec, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9281,6 +9285,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Collectible (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4927512121453600227, guid: 6360541030702ac428a06e0be5382f57, type: 3}
+      propertyPath: m_Height
+      value: 16.784203
+      objectReference: {fileID: 0}
+    - target: {fileID: 4927512121453600227, guid: 6360541030702ac428a06e0be5382f57, type: 3}
+      propertyPath: m_Radius
+      value: 0.81054264
+      objectReference: {fileID: 0}
+    - target: {fileID: 4927512121453600227, guid: 6360541030702ac428a06e0be5382f57, type: 3}
+      propertyPath: m_Center.x
+      value: 0.00000010936015
+      objectReference: {fileID: 0}
+    - target: {fileID: 4927512121453600227, guid: 6360541030702ac428a06e0be5382f57, type: 3}
+      propertyPath: m_Center.y
+      value: -0.000004370338
+      objectReference: {fileID: 0}
+    - target: {fileID: 4927512121453600227, guid: 6360541030702ac428a06e0be5382f57, type: 3}
+      propertyPath: m_Center.z
+      value: -0.09670363
+      objectReference: {fileID: 0}
     - target: {fileID: 7886542132573263176, guid: 6360541030702ac428a06e0be5382f57, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -9331,6 +9355,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7886542132573263176, guid: 6360541030702ac428a06e0be5382f57, type: 3}
       insertIndex: -1
       addedObject: {fileID: 926796166}
+    - targetCorrespondingSourceObject: {fileID: 7886542132573263176, guid: 6360541030702ac428a06e0be5382f57, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 489830003}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2162771372323428660, guid: 6360541030702ac428a06e0be5382f57, type: 3}
       insertIndex: 5
@@ -9737,6 +9764,92 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 489147754}
   m_Mesh: {fileID: 675711555775644876, guid: a905133f72957bc4a9c97b2f7f7a51ff, type: 3}
+--- !u!1001 &489830002
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 462324796}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 1032cbbafcaa24c4f841a80b50ea44b5, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1032cbbafcaa24c4f841a80b50ea44b5, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 405.80038
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1032cbbafcaa24c4f841a80b50ea44b5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: -180.01082
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1032cbbafcaa24c4f841a80b50ea44b5, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 87.02928
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1032cbbafcaa24c4f841a80b50ea44b5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.39406112
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1032cbbafcaa24c4f841a80b50ea44b5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.4583911
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1032cbbafcaa24c4f841a80b50ea44b5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.14953616
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1032cbbafcaa24c4f841a80b50ea44b5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.8099279
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1032cbbafcaa24c4f841a80b50ea44b5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.12615874
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1032cbbafcaa24c4f841a80b50ea44b5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.066765904
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1032cbbafcaa24c4f841a80b50ea44b5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.56889653
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1032cbbafcaa24c4f841a80b50ea44b5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -76.161
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1032cbbafcaa24c4f841a80b50ea44b5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1032cbbafcaa24c4f841a80b50ea44b5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -71.819
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1032cbbafcaa24c4f841a80b50ea44b5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 478efa24bfb681b4291e8a70a9c7933a, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 1032cbbafcaa24c4f841a80b50ea44b5, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 478efa24bfb681b4291e8a70a9c7933a, type: 2}
+    - target: {fileID: 919132149155446097, guid: 1032cbbafcaa24c4f841a80b50ea44b5, type: 3}
+      propertyPath: m_Name
+      value: Vase Shard 4 (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1032cbbafcaa24c4f841a80b50ea44b5, type: 3}
+--- !u!4 &489830003 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1032cbbafcaa24c4f841a80b50ea44b5, type: 3}
+  m_PrefabInstance: {fileID: 489830002}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &491731254
 GameObject:
   m_ObjectHideFlags: 0

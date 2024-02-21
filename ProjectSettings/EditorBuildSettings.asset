@@ -27,6 +27,21 @@ EditorBuildSettings:
     path: Assets/subtitiles/Cut5.unity
     guid: bf2f5329ad823604c80f92569b25307e
   - enabled: 1
+    path: Assets/subtitiles/Frag.unity
+    guid: 4e6bf96dfeb339d44aa6a9da37e8e3a1
+  - enabled: 1
+    path: Assets/subtitiles/Frag2.unity
+    guid: f4be339d4e5e00941b2bb1c9e9829db4
+  - enabled: 1
+    path: Assets/subtitiles/Frag3.unity
+    guid: 22927038b0d96ce42b0ad7464a850c97
+  - enabled: 1
+    path: Assets/subtitiles/Frag4.unity
+    guid: e21926ce711fb674f84ed61c310e0b0a
+  - enabled: 1
+    path: Assets/subtitiles/Frag5.unity
+    guid: 4a809656a0962504d98fc4d2fdb28262
+  - enabled: 1
     path: Assets/Scenes/b.SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
