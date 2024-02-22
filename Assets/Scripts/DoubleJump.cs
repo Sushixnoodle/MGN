@@ -28,6 +28,7 @@ public class DoubleJump : MonoBehaviour
     public float playerHeight;
     public LayerMask whatIsGround;
     bool grounded;
+    public GameObject groundChecker;
 
     [Header("Slope Handling")]
     public float maxSlopeAngle;
@@ -90,11 +91,23 @@ public class DoubleJump : MonoBehaviour
         moveDirection = (forward * curSpeedX) + (right * curSpeedY);
 
         //Animator
-        myAnim.SetFloat("speed", rb.velocity.magnitude);
+        myAnim.SetFloat("speed", moveDirection.magnitude);
 
 
-        Debug.Log(moveDirection.magnitude);
+        Debug.Log(moveDirection);
         Debug.Log(grounded);
+
+        //AnimatorController
+
+        grounded = Physics.CheckSphere(groundChecker.transform.position, 0.1f, whatIsGround);
+
+        myAnim.SetBool("isGrounded", grounded);
+
+
+        if (grounded == true && Input.GetKeyDown(KeyCode.Space))
+        {
+            myAnim.SetTrigger("jumped");
+        } 
 
         // mode freeze
         if (freeze)
@@ -110,14 +123,14 @@ public class DoubleJump : MonoBehaviour
             {
                 moveDirection.y = jumpPower;
                 jumpCount++;
-                myAnim.SetTrigger("jumped");
+                
 
                 // Reset jump count when a jump is initiated
                 if (characterController.isGrounded)
                 {
                     jumpCount = 0;
                     //this.anim.SetBool("Jump", this.grounded);
-                    myAnim.SetBool("isGrounded", grounded);
+                   
                 }
             }
         }
