@@ -26,7 +26,7 @@ public class AudioManagerScript : MonoBehaviour
 
     IEnumerator MusicManager()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.0f);
         if (part1song.isPlaying == false)
         {
             narrator2.Play();
